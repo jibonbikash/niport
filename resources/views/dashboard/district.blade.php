@@ -1,13 +1,25 @@
-@extends('layouts.main')
+@extends('layouts.admin')
 
 @section('content')
 
+    <div class="pageheader pd-t-25 pd-b-35">
+    <div class="pd-t-5 pd-b-5">
+        <h1 class="pd-0 mg-0 tx-20">Dashboard</h1>
+    </div>
+    <div class="breadcrumb pd-0 mg-0">
+        <a class="breadcrumb-item" href="">Dashboard</a>
+        <span class="breadcrumb-item active">Trainer location</span>
+    </div>
+    <br />
+    {!! Form::open(array('route' => 'district', 'method' => 'get')) !!}
+    @include('layouts.themes.metricaladmin.datepicker')
+    {!! Form::close() !!}
 
     <div class="row mt-3">
         <div class="col-md-12 col-lg-12 col-xl-12">
             <div class="card m-b-30">
                 <div class="card-body">
-                    <h5 class="header-title pb-3 mt-0">District</h5>
+                    <h5 class="header-title pb-3 mt-0">location</h5>
                     <div id="division"></div>
                 </div>
             </div>
@@ -25,7 +37,7 @@
                     type: 'column'
                 },
                 title: {
-                    text: 'Participant List District wise'
+                    text: 'Participant List location wise'
                 },
                 credits: {
                     enabled: false

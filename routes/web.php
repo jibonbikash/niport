@@ -14,11 +14,12 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/', 'DashboardController@index')->name('dashboard');
+//Route::get('/', 'DashboardController@index')->name('dashboard');
 Route::get('/district', 'DashboardController@district')->name('district');
 Route::get('/division', 'DashboardController@division')->name('division');
-Route::get('/training', 'DashboardController@training')->name('training');
+
 Route::get('/designation', 'DashboardController@designation')->name('designation');
 Route::get('/gender', 'DashboardController@gender')->name('gender');
 Route::get('/highesttraining', 'DashboardController@highesttraining')->name('highesttraining');
@@ -50,5 +51,5 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('trainers', 'TrainerController@index')->name('trainer.index');
     Route::get('trainingcenter', 'TrainingCenterController@index')->name('center.index');
     Route::get('trainingcenter/{id}', 'TrainingCenterController@details')->name('center.details');
-
+    Route::get('/training', 'DashboardController@training')->name('training');
 });

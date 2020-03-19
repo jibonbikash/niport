@@ -152,7 +152,7 @@ var handleTosterNotifications = function() {
 	var toastCount = 0;
 	var $toastlast;
 	var getMessage = function () {
-		var msg = 'Hi, welcome ';
+		var msg = '';
 		return msg;
 	};
 

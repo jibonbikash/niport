@@ -8,7 +8,10 @@
 <link type="text/css" rel="stylesheet" href="{{ asset('themes/metricaladmin/assets/plugins/apex-chart/apexcharts.css') }}">
 <link type="text/css" rel="stylesheet" href="{{ asset('themes/metricaladmin/assets/css/app.min.css') }}"/>
 <link type="text/css" rel="stylesheet" href="{{ asset('themes/metricaladmin/assets/css/style.min.css') }}"/>
+<link type="text/css" rel="stylesheet" href="{{ asset('themes/metricaladmin/assets/plugins/datepicker/css/datepicker.min.css') }}"/>
 <link type="text/css" rel="stylesheet" href="{{ asset('themes/metricaladmin/assets/plugins/datatables/jquery.dataTables.min.css') }}"/>
 <link type="text/css" rel="stylesheet" href="{{ asset('themes/metricaladmin/assets/plugins/datatables/extensions/dataTables.jqueryui.min.css') }}"/>
+<link type="text/css" rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+
 
 

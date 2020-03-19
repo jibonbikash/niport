@@ -1,7 +1,18 @@
-@extends('layouts.main')
+@extends('layouts.admin')
 
 @section('content')
-
+    <div class="pageheader pd-t-25 pd-b-35">
+        <div class="pd-t-5 pd-b-5">
+            <h1 class="pd-0 mg-0 tx-20">Dashboard</h1>
+        </div>
+        <div class="breadcrumb pd-0 mg-0">
+            <a class="breadcrumb-item" href="">Dashboard</a>
+            <span class="breadcrumb-item active">Training Receiver</span>
+        </div>
+        <br />
+        {!! Form::open(array('route' => 'highesttraining', 'method' => 'get')) !!}
+        @include('layouts.themes.metricaladmin.datepicker')
+        {!! Form::close() !!}
 
     <div class="row mt-3">
         <div class="col-md-12 col-lg-12 col-xl-12">

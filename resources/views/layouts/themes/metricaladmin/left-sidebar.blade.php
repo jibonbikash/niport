@@ -1,8 +1,9 @@
 <div class="page-sidebar">
     <div class="logo">
-        <a class="logo-img" href="index.html">
-            <img class="desktop-logo" src="assets/images/logo.png" alt="">
-            <img class="small-logo" src="assets/images/small-logo.png" alt="">
+        <a class="logo-img" href="/">
+{{--            <img class="desktop-logo" src="assets/images/logo.png" alt="">--}}
+{{--            <img class="small-logo" src="assets/images/small-logo.png" alt="">--}}
+            TMS
         </a>
         <i class="ion-ios-close-empty" id="sidebar-toggle-button-close"></i>
     </div>
@@ -17,15 +18,27 @@
                         <span>Dashboard</span></a>
 
                 </li>
+                @role('Super Admin|admin')
                 <li>
-                    <a href=""><i data-feather="mail"></i>
+                    <a href="{{ route('center.index') }}"><i data-feather="mail"></i>
                         <span>list of training center</span></a>
 
                 </li>
-                <li>
-                    <a href="widgets.html"><i data-feather="layout"></i>
-                        <span>Widgets</span></a>
-                </li>
+                @else
+                    <li><a href="{{ route('training') }}"> <i data-feather="layout"></i><span>Total Training</span></a></li>
+                    <li><a href="{{ route('gender') }}"><i data-feather="layout"></i> <span>Male or Female Trainee</span></a></li>
+                    <li><a href="{{ route('division') }}"><i data-feather="layout"></i><span> Division wise Trainee</span></a></li>
+                    <li><a href="{{ route('district') }}"><i data-feather="layout"></i> <span>District wise Trainee</span></a></li>
+                    <li><a href="{{ route('designation') }}"><i data-feather="layout"></i> <span>Designation wise Trainee</span></a></li>
+                    <li><a href="{{ route('highesttraining') }}"><i data-feather="layout"></i><span> Highest Training Receiver</span></a></li>
+                    <li><a href="{{ route('maxtrainner') }}"><i data-feather="layout"></i><span> Maximum conducted trainer</span></a></li>
+                    <li><a href="{{ route('ongoingtraining') }}"><i data-feather="layout"></i> <span>Ongoing training</span></a></li>
+
+
+                    @endrole
+
+
+
                 <li class="menu-divider mg-y-20-force"></li>
 
 

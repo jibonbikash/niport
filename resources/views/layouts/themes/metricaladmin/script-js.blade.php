@@ -11,7 +11,7 @@
 <script src="{{ asset('themes/metricaladmin/assets/plugins/apex-chart/apexcharts.min.js') }}"></script>
 <script src="{{ asset('themes/metricaladmin/assets/plugins/apex-chart/irregular-data-series.js') }}"></script>
 <script src="{{ asset('themes/metricaladmin/assets/plugins/simpler-sidebar/jquery.simpler-sidebar.min.js') }}"></script>
-<script src="{{ asset('themes/metricaladmin/assets/js/dashboard/sales-dashboard-init.js') }}"></script>
+
 <script src="{{ asset('themes/metricaladmin/assets/js/jquery.slimscroll.min.js') }}"></script>
 <script src="{{ asset('themes/metricaladmin/assets/js/highlight.min.js') }}"></script>
 <script src="{{ asset('themes/metricaladmin/assets/js/app.js') }}"></script>

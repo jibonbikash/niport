@@ -74,7 +74,17 @@
                                     <a href="" class="dropdown-item"><i class="icon-user" aria-hidden="true"></i> My profile</a>
                                     <a href="" class="dropdown-item"><i class="icon-settings" aria-hidden="true"></i> settings</a>
 
-                                    <a href="page-singin.html" class="dropdown-item"><i class="icon-power" aria-hidden="true"></i> Sign-out</a>
+
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        <i class="icon-power" aria-hidden="true"></i>   {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+
                                 </div>
                             </div>
                         </li>
@@ -97,10 +107,11 @@
 
             <div id="main-wrapper">
 
+
                 @yield('content')
 
             </div>
-
+            @include('layouts.themes.metricaladmin.footer')
         </div>
     </div>
 
