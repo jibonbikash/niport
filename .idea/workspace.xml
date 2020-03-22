@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52731acd-0c63-4c11-ae68-300c70f131f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/themes/metricaladmin/datepicker.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/themes/metricaladmin/assets/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/themes/metricaladmin/assets/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/themes/metricaladmin/assets/js/dashboard/cryptocurrency-dashboard-init.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/themes/metricaladmin/assets/js/dashboard/cryptocurrency-dashboard-init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/designation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/designation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/district.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/district.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/division.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/division.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/gender.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/gender.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/home/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/ongoingtraining.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/ongoingtraining.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/training.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/training.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/graph/highesttraining.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/graph/highesttraining.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/graph/maxtrainner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/graph/maxtrainner.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/themes/metricaladmin/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/themes/metricaladmin/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/themes/metricaladmin/left-sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/themes/metricaladmin/left-sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/themes/metricaladmin/script-js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/themes/metricaladmin/script-js.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/themes/metricaladmin/style-css.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/themes/metricaladmin/style-css.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +184,7 @@
       <workItem from="1584266293724" duration="5307000" />
       <workItem from="1584335886553" duration="13321000" />
       <workItem from="1584507768120" duration="10702000" />
-      <workItem from="1584591758178" duration="14920000" />
+      <workItem from="1584591758178" duration="17276000" />
     </task>
     <servers />
   </component>
