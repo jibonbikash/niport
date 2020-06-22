@@ -1,12 +1,12 @@
 
 
-    <div class="row row-xs clearfix">
+<div class="row row-xs clearfix">
         <div class="col-sm-6 col-xl-3">
             <div class="card mg-b-20">
                 <div class="card-body pd-y-0">
                     <div class="custom-fieldset mb-4">
                         <div class="clearfix">
-                            <label>Today Male</label>
+                            <label> Male</label>
                         </div>
                         <div class="d-flex align-items-center text-dark">
                             <div class="wd-40 wd-md-50 ht-40 ht-md-50 mg-r-10 mg-md-r-10 d-flex align-items-center justify-content-center rounded card-icon-warning">
@@ -27,7 +27,7 @@
                 <div class="card-body pd-y-0">
                     <div class="custom-fieldset mb-4">
                         <div class="clearfix">
-                            <label>Today Female</label>
+                            <label> Female</label>
                         </div>
                         <div class="d-flex align-items-center text-dark">
                             <div class="wd-40 wd-md-50 ht-40 ht-md-50 mg-r-10 mg-md-r-10 d-flex align-items-center justify-content-center rounded card-icon-success">
@@ -83,6 +83,53 @@
             </div>
         </div>
     </div>
+
+<div class="row row-xs clearfix">
+    <div class="col-lg-12 col-xl-12 col-12">
+        <div class="card mg-b-20">
+            <div class="card-header">
+                <h4 class="card-header-title">
+                    Timing of trainings organized
+                </h4>
+                <div class="card-header-btn">
+                    <a  href="#" data-toggle="collapse" class="btn card-collapse" data-target="#upcomingReports" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
+                    <a href="#" data-toggle="refresh" class="btn card-refresh"><i class="ion-android-refresh"></i></a>
+                    <a href="#" data-toggle="expand" class="btn card-expand"><i class="ion-android-expand"></i></a>
+
+                </div>
+            </div>
+            <div class="collapse show" id="upcomingReports">
+                <div class="card-body pd-t-0 pd-b-20">
+                    <div class="d-block clearfix">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-primary btn-lg btn-block">
+                                    {{ date('F, Y', strtotime($monthstart)) }} -  {{ date('F, Y', strtotime($first4month)) }}:  <span class="badge badge-light" style="font-size: 22px;"><strong>{{ $countfrst4month }}</strong></span>
+                                </button>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-primary btn-lg btn-block">
+                                    {{ date('F, Y', strtotime($first4month)) }} -  {{ date('F, Y', strtotime($second4month)) }}: <span class="badge badge-light" style="font-size: 22px;">{{ $countsecond4month }}</span>
+                                </button>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-primary btn-lg btn-block">
+                                    {{ date('F, Y', strtotime($second4month)) }} -  {{ date('F, Y', strtotime($last4month)) }}:  <span class="badge badge-light" style="font-size: 22px;"><strong>{{ $countlast4month }}</strong></span>
+                                </button>
+
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <!--/ Count Card End -->
     <div class="row row-xs clearfix">
         <!--================================-->
@@ -136,7 +183,7 @@
             <div class="card mg-b-20">
                 <div class="card-header">
                     <h4 class="card-header-title">
-                        Designation wise Participants
+                        Course list with participants
                     </h4>
                     <div class="card-header-btn">
                         <a  href="#" data-toggle="collapse" class="btn card-collapse" data-target="#DesignationReports" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
@@ -212,7 +259,7 @@
             <div class="card mg-b-20">
                 <div class="card-header">
                     <h4 class="card-header-title">
-                        Upcoming Training
+                        All Training
                     </h4>
                     <div class="card-header-btn">
                         <a  href="#" data-toggle="collapse" class="btn card-collapse" data-target="#upcomingReports" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
@@ -224,18 +271,80 @@
                 <div class="collapse show" id="upcomingReports">
                     <div class="card-body pd-t-0 pd-b-20">
                         <div class="d-block clearfix">
-
+                            @include('trainingcenter._all_training',[
+                               'alltraining'=>$alltraining,
+                   ])
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- / Annual Report End -->
-        <!--================================-->
-        <!-- Sales+Order+Revenue  Start -->
-        <!--================================-->
+
 
     </div>
+33
+<div class="row row-xs clearfix">
+    <!--================================-->
+    <!--  Annual Report Start-->
+    <!--================================-->
+
+    <div class="col-lg-12 col-xl-6 col-12">
+        <div class="card mg-b-20">
+            <div class="card-header">
+                <h4 class="card-header-title">
+                    Grade
+                </h4>
+                <div class="card-header-btn">
+                    <a  href="#" data-toggle="collapse" class="btn card-collapse" data-target="#Grade1" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
+                    <a href="#" data-toggle="refresh" class="btn card-refresh"><i class="ion-android-refresh"></i></a>
+                    <a href="#" data-toggle="expand" class="btn card-expand"><i class="ion-android-expand"></i></a>
+
+                </div>
+            </div>
+            <div class="collapse show" id="Grade1">
+                <div class="card-body pd-t-0 pd-b-20">
+                    <div class="d-block clearfix">
+                        @include('trainingcenter._grad',[
+       'grads'=>$grad,
+])
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-xl-6 col-12">
+        <div class="card mg-b-20">
+            <div class="card-header">
+                <h4 class="card-header-title">
+                    Organization
+                </h4>
+                <div class="card-header-btn">
+                    <a  href="#" data-toggle="collapse" class="btn card-collapse" data-target="#Organization1" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
+                    <a href="#" data-toggle="refresh" class="btn card-refresh"><i class="ion-android-refresh"></i></a>
+                    <a href="#" data-toggle="expand" class="btn card-expand"><i class="ion-android-expand"></i></a>
+
+                </div>
+            </div>
+            <div class="collapse show" id="Organization1">
+                <div class="card-body pd-t-0 pd-b-20">
+                    <div class="d-block clearfix">
+                        @include('trainingcenter._organizaton',[
+        'organizations'=>$organization
+])
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / Annual Report End -->
+    <!--================================-->
+    <!-- Sales+Order+Revenue  Start -->
+    <!--================================-->
+
+</div>
+
+
+
 @push('script')
     <script>
         $(function () {
@@ -252,7 +361,7 @@
                     type: 'pie'
                 },
                 title: {
-                    text: 'Gender Raio'
+                    text: ''
                 },
                 tooltip: {
                     pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -297,7 +406,7 @@
                     type: 'column'
                 },
                 title: {
-                    text: 'Participant List District wise'
+                    text: ''
                 },
                 credits: {
                     enabled: false
@@ -359,7 +468,7 @@
                     type: 'column'
                 },
                 title: {
-                    text: 'Course List With Participants'
+                    text: ''
                 },
                 credits: {
                     enabled: false
@@ -421,7 +530,7 @@
                     type: 'column'
                 },
                 title: {
-                    text: 'Completed Training'
+                    text: ''
                 },
                 credits: {
                     enabled: false
@@ -436,7 +545,7 @@
                 },
                 yAxis: {
                     title: {
-                        text: 'Total Participants'
+                        text: ''
                     }
 
                 },
@@ -482,7 +591,7 @@
                     type: 'column'
                 },
                 title: {
-                    text: 'Ongoing Training'
+                    text: ''
                 },
                 credits: {
                     enabled: false

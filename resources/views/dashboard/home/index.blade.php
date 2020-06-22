@@ -10,16 +10,38 @@
             <span class="breadcrumb-item active">Report </span>
         </div>
     </div>
-    {!! Form::open(array('route' => 'home', 'method' => 'get')) !!}
-    @include('layouts.themes.metricaladmin.datepicker')
-    {!! Form::close() !!}
-<!--/ Count Card End -->
-@include('dashboard.home._index',['totalFEMALE'=>$totalFEMALE,'totalTMALE'=>$totalTMALE, 'batch'=>$batch,
-            'course'=>$course,
-            'locations'=>$locations,
-            'courses'=>$courses,
-            'completed'=>$completed,
-            'ongoing'=>$ongoing])
+
+    @role('Admin')
+
+
+
+
+    @else
+
+        {!! Form::open(array('route' => 'home', 'method' => 'get')) !!}
+        @include('layouts.themes.metricaladmin.datepicker')
+        {!! Form::close() !!}
+        <!--/ Count Card End -->
+        @include('dashboard.home._index',['totalFEMALE'=>$totalFEMALE,'totalTMALE'=>$totalTMALE, 'batch'=>$batch,
+                    'course'=>$course,
+                    'locations'=>$locations,
+                    'courses'=>$courses,
+                    'completed'=>$completed,
+                    'ongoing'=>$ongoing,
+                     'centerinfo'=>$centerID,
+                   'countfrst4month'=>$countfrst4month,
+                    'countsecond4month'=>$countsecond4month,
+                    'countlast4month'=>$countlast4month,
+                     'monthstart'=>$monthstart,
+                    'first4month'=>$first4month,
+                    'second4month'=>$second4month,
+                    'last4month'=>$last4month,
+                    'alltraining'=>$alltraining,
+                     ])
+    @endrole
+
+
+
 
 
 

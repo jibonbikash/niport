@@ -17,5 +17,5 @@
 <script src="{{ asset('themes/metricaladmin/assets/js/app.js') }}"></script>
 <script src="{{ asset('themes/metricaladmin/assets/js/custom.js') }}"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+{{--<script src="https://code.highcharts.com/modules/exporting.js"></script>--}}
+{{--<script src="https://code.highcharts.com/modules/offline-exporting.js"></script>--}}

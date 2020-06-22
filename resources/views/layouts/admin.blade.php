@@ -88,16 +88,7 @@
                                 </div>
                             </div>
                         </li>
-                        <!-- Profile Dropdown End -->
-                        <!--================================-->
-                        <!-- Setting Sidebar Start -->
-                        <!--================================-->
-                        <li class="list-inline-item dropdown hidden-xs">
-                            <a class="settings-icon" id="settingSidebarTrigger" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="icon-settings tx-16"></i>
-                            </a>
-                        </li>
-                        <!--/ Setting Sidebar End -->
+
                     </ul>
                 </div>
                 <!--/ Header Right End -->
@@ -117,6 +108,7 @@
 
 
 </div>
+
 @include('layouts.themes.metricaladmin.script-js')
 @stack('script')
 

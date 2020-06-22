@@ -16,13 +16,13 @@
 //});
 Route::get('/', 'HomeController@index')->name('home');
 
-//Route::get('/', 'DashboardController@index')->name('dashboard');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/district', 'DashboardController@district')->name('district');
 Route::get('/division', 'DashboardController@division')->name('division');
 
 Route::get('/designation', 'DashboardController@designation')->name('designation');
 Route::get('/gender', 'DashboardController@gender')->name('gender');
-Route::get('/highesttraining', 'DashboardController@highesttraining')->name('highesttraining');
+
 Route::get('/maxtrainner', 'DashboardController@maxtrainner')->name('maxtrainner');
 Route::get('/ongoingtraining', 'DashboardController@ongoingtraining')->name('ongoingtraining');
 Route::get('/participant', 'ParticipantsController@index')->name('participants');
@@ -30,16 +30,16 @@ Route::post('/participantupdae', 'ParticipantsController@update')->name('partici
 Route::get('/batchlist', 'ParticipantsController@batchlist')->name('participant_batchlist');
 Route::get('/batchlist/edit/{id}', 'ParticipantsController@batchlistedit')->name('participant_batchlistedit');
 Route::post('/batchlist/update/{id}', 'ParticipantsController@updatebatch')->name('participant_batchlistupdate');
+//Auth::routes(['register' => false]);
+Auth::routes(['register' => false]);
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
+Route::get('/trainingcenter/trainingcenterindfo', 'HomeController@trainingcenterindfo')->name('trainingcenterindfo');
 Route::group(['middleware' => ['auth']], function() {
 
     Route::resource('roles','RoleController');
@@ -49,7 +49,13 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('participants', 'ParticipantController@index')->name('participantlist');
     Route::get('participant/{id}', 'ParticipantController@details')->name('participant.details');
     Route::get('trainers', 'TrainerController@index')->name('trainer.index');
+    Route::get('admin/trainers', 'TrainerController@admin')->name('trainer.admin');
+    Route::get('admin/trainer/details/{id}', 'TrainerController@details')->name('trainer.details');
+    Route::get('admin/preprotest', 'TrainerController@preprotest')->name('trainer.preprotest');
     Route::get('trainingcenter', 'TrainingCenterController@index')->name('center.index');
     Route::get('trainingcenter/{id}', 'TrainingCenterController@details')->name('center.details');
     Route::get('/training', 'DashboardController@training')->name('training');
+    Route::get('/highesttraining', 'DashboardController@highesttraining')->name('highesttraining');
+    Route::get('/admin/highesttraining', 'DashboardController@highesttrainingadmin')->name('highesttrainingadmin');
+
 });

@@ -14,25 +14,36 @@
         <div class="page-sidebar-menu">
             <ul class="accordion-menu">
                 <li class="open active">
-                    <a href=""><i data-feather="home"></i>
+                    <a href="{{ URL::to('/') }}"><i data-feather="home"></i>
                         <span>Dashboard</span></a>
 
                 </li>
-                @role('Super Admin|admin')
+                @role('Super_Admin|admin')
                 <li>
-                    <a href="{{ route('center.index') }}"><i data-feather="mail"></i>
+                    <a href="{{ route('center.index') }}"><i data-feather="compass"></i>
                         <span>list of training center</span></a>
 
                 </li>
+
+                <li>
+                    <a href="{{ route('highesttrainingadmin') }}"><i data-feather="users"></i>
+                        <span>Highest Training Receiver</span></a>
+
+                </li>
+
+                <li><a href="{{ route('trainer.admin') }}"><i data-feather="speaker"></i><span>Trainer List</span></a></li>
+                <li><a href="{{ route('trainer.preprotest') }}"><i data-feather="bookmark"></i><span>Batch/Course Pre/post Test </span></a></li>
+
                 @else
-                    <li><a href="{{ route('training') }}"> <i data-feather="layout"></i><span>Total Training</span></a></li>
-                    <li><a href="{{ route('gender') }}"><i data-feather="layout"></i> <span>Male or Female Trainee</span></a></li>
-                    <li><a href="{{ route('division') }}"><i data-feather="layout"></i><span> Division wise Trainee</span></a></li>
-                    <li><a href="{{ route('district') }}"><i data-feather="layout"></i> <span>District wise Trainee</span></a></li>
-                    <li><a href="{{ route('designation') }}"><i data-feather="layout"></i> <span>Designation wise Trainee</span></a></li>
+                    <li><a href="{{ route('training') }}"> <i data-feather="compass"></i><span>Total Training</span></a></li>
+                    <li><a href="{{ route('gender') }}"><i data-feather="users"></i> <span>Male or Female Trainee</span></a></li>
+                    {{--<li><a href="{{ route('division') }}"><i data-feather="layout"></i><span> Division wise Trainee</span></a></li>--}}
+                    <li><a href="{{ route('district') }}"><i data-feather="list"></i> <span>District wise Trainee</span></a></li>
+                    <li><a href="{{ route('designation') }}"><i data-feather="smile"></i> <span>Designation wise Trainee</span></a></li>
                     <li><a href="{{ route('highesttraining') }}"><i data-feather="layout"></i><span> Highest Training Receiver</span></a></li>
-                    <li><a href="{{ route('maxtrainner') }}"><i data-feather="layout"></i><span> Maximum conducted trainer</span></a></li>
-                    <li><a href="{{ route('ongoingtraining') }}"><i data-feather="layout"></i> <span>Ongoing training</span></a></li>
+                    <li><a href="{{ route('participantlist') }}"><i data-feather="users"></i><span> Trainee/Participant List </span></a></li>
+                    <li><a href="{{ route('maxtrainner') }}"><i data-feather="codepen"></i><span> Maximum conducted trainer</span></a></li>
+                    <li><a href="{{ route('ongoingtraining') }}"><i data-feather="activity"></i> <span>Ongoing training</span></a></li>
 
 
                     @endrole
